@@ -121,6 +121,7 @@ namespace audio_tools {
 
             // navigation support
             autonext = p_source->isAutoNext();
+            autonext = false;
 
             // start dependent objects
             p_out_decoding->begin();
@@ -286,6 +287,7 @@ namespace audio_tools {
         /// Set move to next
         virtual void setAutoNext(bool next) {
             autonext = next;
+            p_source->setAutoNext(next);
         }
 
         /// Call this method in the loop. 

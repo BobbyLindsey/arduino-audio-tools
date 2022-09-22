@@ -54,11 +54,14 @@ public:
     virtual void setTimeout(int millisec) {};
 
     /// Returns default setting go to the next
-    virtual bool isAutoNext() {return true; }
+    virtual bool isAutoNext() { return autoNext; }
+
+    virtual void setAutoNext(bool next) { autoNext = next; }
 
 
 protected:
     int timeout_auto_next_value = 500;
+    bool autoNext = false;
 };
 
 /**
